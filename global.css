@@ -1,0 +1,25 @@
+body {
+    background-color: grey;
+    text-align: center;
+}
+
+#navbar {
+    border-width:3px;
+    border-color:aqua;
+    border-style: solid;
+    padding-bottom: 2em;
+    padding-top: 1em;
+}
+
+.navbarElement{
+    background-color: cadetblue;
+    float:left;
+    width: 25%;
+    list-style-type: none;
+}
+
+#homeParagraph{
+    width: 80%;
+    padding-left: 10%;
+    font-size: large;
+}
