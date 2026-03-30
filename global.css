@@ -22,3 +22,15 @@ body {
     padding-left: 10%;
     font-size: large;
 }
+
+.twoCol div {
+    width: 50%;
+    float: left;
+    font-size: large;
+}
+
+.twoCol ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
