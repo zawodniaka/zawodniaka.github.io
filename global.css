@@ -4,11 +4,10 @@ body {
 }
 
 #navbar {
-    border-width:3px;
-    border-color:aqua;
-    border-style: solid;
     padding-bottom: 2em;
     padding-top: 1em;
+    background: cadetblue;
+    
 }
 
 .navbarElement{
