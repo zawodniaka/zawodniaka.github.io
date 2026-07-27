@@ -30,34 +30,48 @@
         </p>
 
         <h3>Pictures</h3>
-        <!--slideshow done with the help of the following tutorial: https://www.w3schools.com/howto/howto_js_slideshow.asp-->
+        <!--slideshow done with the help of the following tutorial: https://www.w3schools.com/howto/howto_js_slideshow.asp -->
         <div class="slideshow">
             <div class="picture">
                 <img src="jetsetgo/homepage.png">
-                <p class="caption">test caption</p>
+                <p class="caption">Caption: A picture showing the Jet Set Go homepage. There is a 
+                    button to start planning a trip and pictures of the most popular trip destinations.
+                </p>
             </div>
             <div class="picture">
                 <img src="jetsetgo/createAccount.png">
-                <p class="caption">test caption</p>
+                <p class="caption">Caption: A picture showing a form to create an account with Jet 
+                    Set Go. There are fields to collect a first name, last name, username, password, and 
+                    email.
+                </p>
             </div>
             <div class="picture">
                 <img src="jetsetgo/login.png">
-                <p class="caption">test caption</p>
+                <p class="caption">Caption: A picture showing a form to log in to Jet Set Go. There is 
+                    a place to input one's username and password and links to reset one's password or 
+                    create an account.
+                </p>
             </div>
             <div class="picture">
                 <img src="jetsetgo/welcomeUser.png">
-                <p class="caption">test caption</p>
+                <p class="caption">Caption: A picture showing the user welcome screen. There is a 
+                    button to start planning a trip and pictures of the most popular trip destinations.
+                </p>
             </div>
             <div class="picture">
                 <img src="jetsetgo/myTrips.png">
-                <p class="caption">test caption</p>
+                <p class="caption">Caption: A picture showing the user's trips page. There is a display listing
+                    the user's trips.
+                </p>
             </div>
             <div class="picture">
                 <img src="jetsetgo/checkout.png">
-                <p class="caption">test caption</p>
+                <p class="caption">Caption: A picture showing a list of a user's flights and hotel rooms in 
+                    their cart. They can increase or decrease their reservations or remove them.
+                </p>
             </div>
-            <a class="previous" onclick="changeSlide()">&#11164;</a>
-            <a class="next" onclick="changeSlide()">&#11166;</a>
+            <a class="previous" onclick="changeSlide(-1)">&#11164;</a>
+            <a class="next" onclick="changeSlide(1)">&#11166;</a>
         </div>
         <hr>
         <h2>Book Stats- Console Version</h2>
@@ -92,4 +106,31 @@
 
         <hr>
     </body>
+    <script>
+        let slideNumber=0;
+
+         showSlides(slideNumber);
+
+         function changeSlide(number){
+            slideNumber+=number;
+            showSlides(slideNumber);
+         }
+
+        function showSlides(number){
+            let slides=document.getElementsByClassName("picture");
+
+            if(number<0){
+                slideNumber=slides.length-1;
+            }
+            if(number>slides.length-1){
+                slideNumber=0;
+            }
+
+            for(i=0; i<slides.length; i++){
+                slides[i].style.display="none";
+            }
+            slides[slideNumber].style.display="inline flow-root";
+
+        }
+    </script>
 </html>
