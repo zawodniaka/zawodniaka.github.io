@@ -1,3 +1,5 @@
+* {box-sizing:border-box}
+
 body {
     background-color: grey;
     text-align: center;
@@ -33,4 +35,43 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+.slideshow {
+    
+  position: relative;
+  
+}
+
+.previous, .next{
+    cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding-right: 1em;
+  padding-left: 1em;
+  color: black;
+  font-size: x-large;
+  user-select: none;
+}
+
+.previous{
+    left: 0;
+}
+
+.next{
+    right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.previous:hover, .next:hover{
+    background-color:antiquewhite;
+}
+
+.picture{
+    display:none;
+}
+
+img{
+    max-width: 75%;
 }

@@ -16,7 +16,7 @@ class Navbar extends HTMLElement{
             </nav>
             </header>
             
-        ;`
+        `
     }
 }
 
